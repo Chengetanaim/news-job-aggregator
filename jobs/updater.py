@@ -6,17 +6,17 @@ from apscheduler.schedulers.background import BackgroundScheduler
 
 def news_start():
     scheduler = BackgroundScheduler()
-    scheduler.add_job(add_news, 'interval', minutes=10)
+    scheduler.add_job(add_news, 'interval', hours=6)
     scheduler.start()
 
 
 def job_start():
     scheduler = BackgroundScheduler()
-    scheduler.add_job(add_job, 'interval', minutes=10)
+    scheduler.add_job(add_job, 'interval', hours=6)
     scheduler.start()
 
 
 def internationalnews_start():
     scheduler = BackgroundScheduler()
-    scheduler.add_job(add_international_news, 'interval', minutes=10)
+    scheduler.add_job(add_international_news, 'interval', hours=6)
     scheduler.start()
